@@ -308,7 +308,7 @@ import "./update.css"
                   </select>
                 </div>
 
-           <div className="writeFormGroup">
+                <div className="writeFormGroup">
                <textarea onChange={(e) => setDescription(e.target.value)}
                placeholder="Tell your story..." 
                type="text" value={description}
