@@ -10,22 +10,8 @@ const CustomForm = () => {
     username: '',
     comment: '',
   });
-  const [comments, setComments] = useState([]);
-  const users = [
-    {
-      id: 'isaac',
-      display: 'Isaac Newton',
-    },
-    {
-      id: 'sam',
-      display: 'Sam Victor',
-    },
-    {
-      id: 'emma',
-      display: 'emmanuel@nobody.com',
-    },
-  ];
-  const submit = () => {
+ 
+  // const submit = () => {
     if (formState.username === '' || formState.comment === '') {
       alert('Please fill in all fields');
       return;
