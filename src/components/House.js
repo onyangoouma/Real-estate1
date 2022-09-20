@@ -29,7 +29,7 @@ function House() {
 
  const handleDelete = () => {
   fetch("http://localhost:9292/rents" + houses.id, {
-    method: "DELETE",
+    method: "",
   }).then(() => {
   
   })}
