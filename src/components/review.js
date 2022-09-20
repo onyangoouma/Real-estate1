@@ -11,22 +11,7 @@ function Review() {
     
   }
   return (
-    <div>
-     
-      <div className="review">
-       
-        <form onSubmit={handleChange}>
-            <h2>Leave a Review</h2>
-            <label htmlFor="rating">Rating</label>
-            <input
-              type="text" 
-              placeholder="house"
-              id="rating"
-              name="rating"
-              autoComplete="off"
-              value={rating}
-              onChange={(e) => setRating(e.target.value)}
-            />
+
 
             <label htmlFor="comment">Comment</label>
             <input className="comment"
