@@ -27,6 +27,13 @@ function House() {
 
  }, [isfetching])
 
+ const handleDelete = () => {
+  fetch("http://localhost:9292/rents" + houses.id, {
+    method: "DELETE",
+  }).then(() => {
+  
+  })}
+
 return (
   <div className='grid grid-cols-3'>
   {houses.map((house) => (
@@ -46,36 +53,44 @@ return (
           </p>
           <div className="advants">
             <div>
-              <span>house.bedroom</span>
-              <div><i className="fas fa-th-large"></i><span>3</span></div>
+             
+              <span>bedroom</span>
+              <div><i className="fas fa-th-large"> {house.bedroom}</i><span></span></div>
             </div>
             <div>
               <span>Bathroom</span>
-              <div><i className="fas fa-shower"></i><span>3</span></div>
+              
+              <div><i className="fas fa-shower">{house.bathroom}</i><span></span></div>
             </div>
             <div>
+            {house.area}
               <span>Area</span>
               <div>
-                <i className="fas fa-vector-square"></i
-                ><span>{houses.size}<span>Sq Ft</span></span>
+                <i className="fas fa-vector-square"></i>
+                
+                <span>size<span> {house.size} Sq Ft</span></span>
+                
               </div>
             </div>
           </div>
           <div className="price">
             <span>For Sale</span>
-            <span>{house.price}</span>
+            <span>price</span>
+            {house.price}
           </div>
           <div>
           <i className="fa-regular fa-heart" />
           <button>
-          <Link to="customform">Review</Link>
+          <Link to="customform">Review</Link> 
           </button>
+          
           </div>
         </div>
       </div>
-      
-      
+      <button className="writeSubmit"onClick={handleDelete}> Delete</button>
     </div>
+
+  
    
     )
     )}
