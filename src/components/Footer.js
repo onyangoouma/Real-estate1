@@ -6,11 +6,11 @@ const Footer = () => {
     <footer className="footer">
       <div className='container mx-auto'>
         
-        Copyright &copy; 2022. All rights reserved.
+        Copyright &copy; 2022.
       </div>
     
     </footer>
   );
 };
 
-export default Footer;
+export default Footer; 
